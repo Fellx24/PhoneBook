@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace PhoneBook
 {
@@ -16,8 +17,8 @@ namespace PhoneBook
         {
             InitializeComponent();
             FormClosing += loginForm_FormClosing;
-            
         }
+        
         private void loginForm_Load(object sender, EventArgs e)
         {
             loginField.Text = "Введите логин...";
@@ -25,7 +26,7 @@ namespace PhoneBook
             loginField.ForeColor = Color.Gray;
             passwordField.ForeColor = Color.Gray;
         }
-
+        
         private void loginField_Enter(object sender, EventArgs e)
         {
             if (loginField.Text == "Введите логин...")
@@ -34,7 +35,7 @@ namespace PhoneBook
                 loginField.ForeColor = Color.Black;
             }
         }
-
+        
         private void loginField_Leave(object sender, EventArgs e)
         {
             if (loginField.Text == "")
@@ -65,16 +66,45 @@ namespace PhoneBook
         private void button1_Click(object sender, EventArgs e)
         {
             button1.Text = "Просмотреть";
-            Form1 view = new Form1();
+            tableForm view = new tableForm();
             view.Show();
             this.Hide();
-           
-            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DataSet table = new DataSet();
+            Class1 Get = new Class1();
+            
+            string userLogin = loginField.Text;
+            string userPass = passwordField.Text;
+            DB dB = new DB();
+            dB.getConnection();
+            DataTable dT = new DataTable();
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM 'user' WHERE login = {userLogin} AND pass = {userPass}");
+            dataAdapter.SelectCommand = command;
+            dataAdapter.Fill(dT);
+
+            try
+            {
+                if (dT.Rows.Count > 0)
+                {
+                    tableForm form1 = new tableForm();
+                    Hide();
+                    form1.Show();
+                    Get.Role = Convert.ToInt32(dT.Rows[0][8]);
+                    Get.Name = Convert.ToString(dT.Rows[0][2]);
+                    Get.Fathername = Convert.ToString(dT.Rows[0][3]);
+                }
+
+                else
+                    MessageBox.Show("");
+            }
+
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void loginForm_FormClosing(object sender, FormClosingEventArgs e)
         {

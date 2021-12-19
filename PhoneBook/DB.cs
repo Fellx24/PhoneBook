@@ -24,10 +24,5 @@ namespace PhoneBook
             if (conn.State == System.Data.ConnectionState.Open)
                 conn.Close();
         }
-        public int getRole(ref int role)
-        {
-            
-            return role;
-        }
     }
 }
