@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace PhoneBook
@@ -25,12 +26,35 @@ namespace PhoneBook
 
         private void tableForm_Load(object sender, EventArgs e)
         {
-            Class1 get = new Class1();
+            Getters get = new Getters();
             string name = get.Name;
             string fathername = get.Fathername;
+            DB dB = new DB();
+            DataTable dataTable = new DataTable();
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM 'user'");
+            dataAdapter.SelectCommand = command;
             int role = get.Role;
+            dataAdapter.Fill(dataTable);
+            List<string> names = new List<string>();
+            for(int k; k = 2;k++)
+            {
+                names.Add($"{}")
+            }
             if (role == 1)
+            {
                 greetingsText.Text = $"Добро пожаловать, {name} {fathername}";
+                adressTB.ReadOnly = false;
+                cabTB.ReadOnly = false;
+                citynumberTB.ReadOnly = false;
+                fathernameTB.ReadOnly = false;
+                nameTB.ReadOnly = false;
+                postTB.ReadOnly = false;
+                surnameTB.ReadOnly = false;
+            }
+            
+
+            
         }
     }
 }

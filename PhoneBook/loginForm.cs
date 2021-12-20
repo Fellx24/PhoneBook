@@ -65,7 +65,7 @@ namespace PhoneBook
 
         private void button1_Click(object sender, EventArgs e)
         {
-            button1.Text = "Просмотреть";
+            enterAsAdminButton.Text = "Просмотреть";
             tableForm view = new tableForm();
             view.Show();
             this.Hide();
@@ -73,32 +73,33 @@ namespace PhoneBook
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Class1 Get = new Class1();
+            Getters Get = new Getters();
             
             string userLogin = loginField.Text;
             string userPass = passwordField.Text;
             DB dB = new DB();
-            dB.getConnection();
-            DataTable dT = new DataTable();
+            DataTable dataTable = new DataTable();
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand($"SELECT * FROM 'user' WHERE login = {userLogin} AND pass = {userPass}");
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM 'user' WHERE login = {userLogin} AND password = {userPass}");
             dataAdapter.SelectCommand = command;
-            dataAdapter.Fill(dT);
+            dataAdapter.Fill(dataTable);
 
             try
             {
-                if (dT.Rows.Count > 0)
+                dB.connectionOpen();
+                if (dataTable.Rows.Count > 0)
                 {
                     tableForm form1 = new tableForm();
                     Hide();
                     form1.Show();
-                    Get.Role = Convert.ToInt32(dT.Rows[0][8]);
-                    Get.Name = Convert.ToString(dT.Rows[0][2]);
-                    Get.Fathername = Convert.ToString(dT.Rows[0][3]);
+                    Get.Role = Convert.ToInt32(dataTable.Rows[0][8]);
+                    Get.Name = Convert.ToString(dataTable.Rows[0][2]);
+                    Get.Fathername = Convert.ToString(dataTable.Rows[0][3]);
                 }
 
                 else
                     MessageBox.Show("");
+                dB.connectionClose();
             }
 
             catch(Exception ex)

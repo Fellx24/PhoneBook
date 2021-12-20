@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBook
 {
-    public class Class1
+    public class Getters
     {
         private int role;
         private string name;

@@ -125,7 +125,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Getters.cs" />
     <Compile Include="DB.cs" />
     <Compile Include="tableForm.cs">
       <SubType>Form</SubType>

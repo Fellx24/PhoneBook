@@ -52,6 +52,7 @@ namespace PhoneBook
             // 
             this.citynumberTB.Location = new System.Drawing.Point(378, 213);
             this.citynumberTB.Name = "citynumberTB";
+            this.citynumberTB.ReadOnly = true;
             this.citynumberTB.Size = new System.Drawing.Size(319, 20);
             this.citynumberTB.TabIndex = 6;
             // 
@@ -59,6 +60,7 @@ namespace PhoneBook
             // 
             this.cabTB.Location = new System.Drawing.Point(378, 177);
             this.cabTB.Name = "cabTB";
+            this.cabTB.ReadOnly = true;
             this.cabTB.Size = new System.Drawing.Size(319, 20);
             this.cabTB.TabIndex = 5;
             // 
@@ -66,6 +68,7 @@ namespace PhoneBook
             // 
             this.postTB.Location = new System.Drawing.Point(378, 251);
             this.postTB.Name = "postTB";
+            this.postTB.ReadOnly = true;
             this.postTB.Size = new System.Drawing.Size(319, 20);
             this.postTB.TabIndex = 7;
             // 
@@ -73,6 +76,7 @@ namespace PhoneBook
             // 
             this.adressTB.Location = new System.Drawing.Point(378, 140);
             this.adressTB.Name = "adressTB";
+            this.adressTB.ReadOnly = true;
             this.adressTB.Size = new System.Drawing.Size(319, 20);
             this.adressTB.TabIndex = 4;
             // 
@@ -80,6 +84,7 @@ namespace PhoneBook
             // 
             this.surnameTB.Location = new System.Drawing.Point(378, 68);
             this.surnameTB.Name = "surnameTB";
+            this.surnameTB.ReadOnly = true;
             this.surnameTB.Size = new System.Drawing.Size(319, 20);
             this.surnameTB.TabIndex = 2;
             // 
@@ -87,6 +92,7 @@ namespace PhoneBook
             // 
             this.fathernameTB.Location = new System.Drawing.Point(378, 103);
             this.fathernameTB.Name = "fathernameTB";
+            this.fathernameTB.ReadOnly = true;
             this.fathernameTB.Size = new System.Drawing.Size(319, 20);
             this.fathernameTB.TabIndex = 3;
             // 
@@ -94,6 +100,7 @@ namespace PhoneBook
             // 
             this.nameTB.Location = new System.Drawing.Point(378, 32);
             this.nameTB.Name = "nameTB";
+            this.nameTB.ReadOnly = true;
             this.nameTB.Size = new System.Drawing.Size(319, 20);
             this.nameTB.TabIndex = 1;
             // 
