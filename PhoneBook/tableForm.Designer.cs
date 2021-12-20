@@ -43,72 +43,79 @@ namespace PhoneBook
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(0, 0);
+            this.listBox1.Location = new System.Drawing.Point(22, 27);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(372, 446);
+            this.listBox1.Size = new System.Drawing.Size(332, 303);
             this.listBox1.TabIndex = 0;
             // 
             // citynumberTB
             // 
-            this.citynumberTB.Location = new System.Drawing.Point(378, 213);
+            this.citynumberTB.Location = new System.Drawing.Point(378, 258);
             this.citynumberTB.Name = "citynumberTB";
             this.citynumberTB.ReadOnly = true;
             this.citynumberTB.Size = new System.Drawing.Size(319, 20);
             this.citynumberTB.TabIndex = 6;
+            this.citynumberTB.TextChanged += new System.EventHandler(this.citynumberTB_TextChanged);
             // 
             // cabTB
             // 
-            this.cabTB.Location = new System.Drawing.Point(378, 177);
+            this.cabTB.Location = new System.Drawing.Point(378, 218);
             this.cabTB.Name = "cabTB";
             this.cabTB.ReadOnly = true;
             this.cabTB.Size = new System.Drawing.Size(319, 20);
             this.cabTB.TabIndex = 5;
+            this.cabTB.TextChanged += new System.EventHandler(this.cabTB_TextChanged);
             // 
             // postTB
             // 
-            this.postTB.Location = new System.Drawing.Point(378, 251);
+            this.postTB.Location = new System.Drawing.Point(378, 297);
             this.postTB.Name = "postTB";
             this.postTB.ReadOnly = true;
             this.postTB.Size = new System.Drawing.Size(319, 20);
             this.postTB.TabIndex = 7;
+            this.postTB.TextChanged += new System.EventHandler(this.postTB_TextChanged);
             // 
             // adressTB
             // 
-            this.adressTB.Location = new System.Drawing.Point(378, 140);
+            this.adressTB.Location = new System.Drawing.Point(378, 178);
             this.adressTB.Name = "adressTB";
             this.adressTB.ReadOnly = true;
             this.adressTB.Size = new System.Drawing.Size(319, 20);
             this.adressTB.TabIndex = 4;
+            this.adressTB.TextChanged += new System.EventHandler(this.adressTB_TextChanged);
             // 
             // surnameTB
             // 
-            this.surnameTB.Location = new System.Drawing.Point(378, 68);
+            this.surnameTB.Location = new System.Drawing.Point(378, 98);
             this.surnameTB.Name = "surnameTB";
             this.surnameTB.ReadOnly = true;
             this.surnameTB.Size = new System.Drawing.Size(319, 20);
             this.surnameTB.TabIndex = 2;
+            this.surnameTB.TextChanged += new System.EventHandler(this.surnameTB_TextChanged);
             // 
             // fathernameTB
             // 
-            this.fathernameTB.Location = new System.Drawing.Point(378, 103);
+            this.fathernameTB.Location = new System.Drawing.Point(378, 138);
             this.fathernameTB.Name = "fathernameTB";
             this.fathernameTB.ReadOnly = true;
             this.fathernameTB.Size = new System.Drawing.Size(319, 20);
             this.fathernameTB.TabIndex = 3;
+            this.fathernameTB.TextChanged += new System.EventHandler(this.fathernameTB_TextChanged);
             // 
             // nameTB
             // 
-            this.nameTB.Location = new System.Drawing.Point(378, 32);
+            this.nameTB.Location = new System.Drawing.Point(378, 58);
             this.nameTB.Name = "nameTB";
             this.nameTB.ReadOnly = true;
             this.nameTB.Size = new System.Drawing.Size(319, 20);
             this.nameTB.TabIndex = 1;
+            this.nameTB.TextChanged += new System.EventHandler(this.nameTB_TextChanged);
             // 
             // greetingsText
             // 
             this.greetingsText.AutoSize = true;
             this.greetingsText.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.greetingsText.Location = new System.Drawing.Point(443, 9);
+            this.greetingsText.Location = new System.Drawing.Point(496, 22);
             this.greetingsText.Name = "greetingsText";
             this.greetingsText.Size = new System.Drawing.Size(90, 20);
             this.greetingsText.TabIndex = 8;
@@ -118,7 +125,7 @@ namespace PhoneBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(719, 354);
             this.Controls.Add(this.greetingsText);
             this.Controls.Add(this.nameTB);
             this.Controls.Add(this.fathernameTB);

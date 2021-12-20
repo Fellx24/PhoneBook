@@ -37,9 +37,9 @@ namespace PhoneBook
             // 
             // enterAsAdminButton
             // 
-            this.enterAsAdminButton.Location = new System.Drawing.Point(12, 95);
+            this.enterAsAdminButton.Location = new System.Drawing.Point(22, 101);
             this.enterAsAdminButton.Name = "enterAsAdminButton";
-            this.enterAsAdminButton.Size = new System.Drawing.Size(118, 23);
+            this.enterAsAdminButton.Size = new System.Drawing.Size(121, 39);
             this.enterAsAdminButton.TabIndex = 0;
             this.enterAsAdminButton.Text = "Войти";
             this.enterAsAdminButton.UseVisualStyleBackColor = true;
@@ -47,9 +47,9 @@ namespace PhoneBook
             // 
             // enterWithoutLoginButton
             // 
-            this.enterWithoutLoginButton.Location = new System.Drawing.Point(297, 95);
+            this.enterWithoutLoginButton.Location = new System.Drawing.Point(166, 101);
             this.enterWithoutLoginButton.Name = "enterWithoutLoginButton";
-            this.enterWithoutLoginButton.Size = new System.Drawing.Size(118, 23);
+            this.enterWithoutLoginButton.Size = new System.Drawing.Size(122, 39);
             this.enterWithoutLoginButton.TabIndex = 1;
             this.enterWithoutLoginButton.Text = "Просмотреть";
             this.enterWithoutLoginButton.UseVisualStyleBackColor = true;
@@ -57,10 +57,10 @@ namespace PhoneBook
             // 
             // loginField
             // 
-            this.loginField.Location = new System.Drawing.Point(12, 25);
+            this.loginField.Location = new System.Drawing.Point(22, 23);
             this.loginField.Name = "loginField";
             this.loginField.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.loginField.Size = new System.Drawing.Size(397, 20);
+            this.loginField.Size = new System.Drawing.Size(266, 25);
             this.loginField.TabIndex = 2;
             this.loginField.Text = "";
             this.loginField.Enter += new System.EventHandler(this.loginField_Enter);
@@ -68,9 +68,9 @@ namespace PhoneBook
             // 
             // passwordField
             // 
-            this.passwordField.Location = new System.Drawing.Point(12, 51);
+            this.passwordField.Location = new System.Drawing.Point(22, 58);
             this.passwordField.Name = "passwordField";
-            this.passwordField.Size = new System.Drawing.Size(397, 20);
+            this.passwordField.Size = new System.Drawing.Size(266, 25);
             this.passwordField.TabIndex = 3;
             this.passwordField.Text = "";
             this.passwordField.Enter += new System.EventHandler(this.PasswordField_Enter);
@@ -80,7 +80,7 @@ namespace PhoneBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 130);
+            this.ClientSize = new System.Drawing.Size(313, 163);
             this.Controls.Add(this.passwordField);
             this.Controls.Add(this.loginField);
             this.Controls.Add(this.enterWithoutLoginButton);

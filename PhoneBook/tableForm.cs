@@ -37,11 +37,9 @@ namespace PhoneBook
             int role = get.Role;
             dataAdapter.Fill(dataTable);
             List<string> names = new List<string>();
-            int i = 0;
-            while(i <= dataTable.Rows.Count )  
+            for(int k; k = 2;k++)
             {
-                names.Add($"{dataTable.Rows[i][1]} {dataTable.Rows[i][2]} {dataTable.Rows[i][3]}");
-                if (dataTable.Rows[i][])
+                names.Add($"{}")
             }
             if (role == 1)
             {
@@ -57,6 +55,41 @@ namespace PhoneBook
             
 
             
+        }
+
+        private void nameTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void surnameTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fathernameTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adressTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cabTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void citynumberTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void postTB_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

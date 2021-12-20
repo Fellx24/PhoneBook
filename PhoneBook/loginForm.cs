@@ -18,7 +18,7 @@ namespace PhoneBook
             InitializeComponent();
             FormClosing += loginForm_FormClosing;
         }
-        
+
         private void loginForm_Load(object sender, EventArgs e)
         {
             loginField.Text = "Введите логин...";
@@ -26,7 +26,7 @@ namespace PhoneBook
             loginField.ForeColor = Color.Gray;
             passwordField.ForeColor = Color.Gray;
         }
-        
+
         private void loginField_Enter(object sender, EventArgs e)
         {
             if (loginField.Text == "Введите логин...")
@@ -35,7 +35,7 @@ namespace PhoneBook
                 loginField.ForeColor = Color.Black;
             }
         }
-        
+
         private void loginField_Leave(object sender, EventArgs e)
         {
             if (loginField.Text == "")
@@ -74,7 +74,7 @@ namespace PhoneBook
         private void button2_Click(object sender, EventArgs e)
         {
             Getters Get = new Getters();
-            
+
             string userLogin = loginField.Text;
             string userPass = passwordField.Text;
             DB dB = new DB();
@@ -92,7 +92,7 @@ namespace PhoneBook
                     tableForm form1 = new tableForm();
                     Hide();
                     form1.Show();
-                    Get.Role = Convert.ToInt32(dataTable.Rows[0][10]);
+                    Get.Role = Convert.ToInt32(dataTable.Rows[0][8]);
                     Get.Name = Convert.ToString(dataTable.Rows[0][2]);
                     Get.Fathername = Convert.ToString(dataTable.Rows[0][3]);
                 }
@@ -102,7 +102,7 @@ namespace PhoneBook
                 dB.connectionClose();
             }
 
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
