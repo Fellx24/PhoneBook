@@ -37,9 +37,11 @@ namespace PhoneBook
             int role = get.Role;
             dataAdapter.Fill(dataTable);
             List<string> names = new List<string>();
-            for(int k; k = 2;k++)
+            int i = 0;
+            while(i <= dataTable.Rows.Count )  
             {
-                names.Add($"{}")
+                names.Add($"{dataTable.Rows[i][1]} {dataTable.Rows[i][2]} {dataTable.Rows[i][3]}");
+                if (dataTable.Rows[i][])
             }
             if (role == 1)
             {

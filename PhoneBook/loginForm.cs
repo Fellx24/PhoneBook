@@ -92,7 +92,7 @@ namespace PhoneBook
                     tableForm form1 = new tableForm();
                     Hide();
                     form1.Show();
-                    Get.Role = Convert.ToInt32(dataTable.Rows[0][8]);
+                    Get.Role = Convert.ToInt32(dataTable.Rows[0][10]);
                     Get.Name = Convert.ToString(dataTable.Rows[0][2]);
                     Get.Fathername = Convert.ToString(dataTable.Rows[0][3]);
                 }
