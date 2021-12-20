@@ -63,15 +63,14 @@ namespace PhoneBook
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            enterAsAdminButton.Text = "Просмотреть";
             tableForm view = new tableForm();
             view.Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             Getters Get = new Getters();
 
@@ -80,13 +79,15 @@ namespace PhoneBook
             DB dB = new DB();
             DataTable dataTable = new DataTable();
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand($"SELECT * FROM 'user' WHERE login = {userLogin} AND password = {userPass}");
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM `user` WHERE `login` = `{userLogin}` AND `password` = `{userPass}`",dB.getConnection());
             dataAdapter.SelectCommand = command;
-            dataAdapter.Fill(dataTable);
+
 
             try
             {
                 dB.connectionOpen();
+                dataAdapter.Fill(dataTable);
+                dB.connectionClose();
                 if (dataTable.Rows.Count > 0)
                 {
                     tableForm form1 = new tableForm();
@@ -99,7 +100,6 @@ namespace PhoneBook
 
                 else
                     MessageBox.Show("");
-                dB.connectionClose();
             }
 
             catch (Exception ex)

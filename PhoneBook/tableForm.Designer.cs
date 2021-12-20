@@ -44,6 +44,7 @@ namespace PhoneBook
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(22, 27);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(0);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(332, 303);
             this.listBox1.TabIndex = 0;
@@ -55,7 +56,6 @@ namespace PhoneBook
             this.citynumberTB.ReadOnly = true;
             this.citynumberTB.Size = new System.Drawing.Size(319, 20);
             this.citynumberTB.TabIndex = 6;
-            this.citynumberTB.TextChanged += new System.EventHandler(this.citynumberTB_TextChanged);
             // 
             // cabTB
             // 
@@ -64,7 +64,6 @@ namespace PhoneBook
             this.cabTB.ReadOnly = true;
             this.cabTB.Size = new System.Drawing.Size(319, 20);
             this.cabTB.TabIndex = 5;
-            this.cabTB.TextChanged += new System.EventHandler(this.cabTB_TextChanged);
             // 
             // postTB
             // 
@@ -73,7 +72,6 @@ namespace PhoneBook
             this.postTB.ReadOnly = true;
             this.postTB.Size = new System.Drawing.Size(319, 20);
             this.postTB.TabIndex = 7;
-            this.postTB.TextChanged += new System.EventHandler(this.postTB_TextChanged);
             // 
             // adressTB
             // 
@@ -82,7 +80,6 @@ namespace PhoneBook
             this.adressTB.ReadOnly = true;
             this.adressTB.Size = new System.Drawing.Size(319, 20);
             this.adressTB.TabIndex = 4;
-            this.adressTB.TextChanged += new System.EventHandler(this.adressTB_TextChanged);
             // 
             // surnameTB
             // 
@@ -91,7 +88,6 @@ namespace PhoneBook
             this.surnameTB.ReadOnly = true;
             this.surnameTB.Size = new System.Drawing.Size(319, 20);
             this.surnameTB.TabIndex = 2;
-            this.surnameTB.TextChanged += new System.EventHandler(this.surnameTB_TextChanged);
             // 
             // fathernameTB
             // 
@@ -100,7 +96,6 @@ namespace PhoneBook
             this.fathernameTB.ReadOnly = true;
             this.fathernameTB.Size = new System.Drawing.Size(319, 20);
             this.fathernameTB.TabIndex = 3;
-            this.fathernameTB.TextChanged += new System.EventHandler(this.fathernameTB_TextChanged);
             // 
             // nameTB
             // 
@@ -109,7 +104,6 @@ namespace PhoneBook
             this.nameTB.ReadOnly = true;
             this.nameTB.Size = new System.Drawing.Size(319, 20);
             this.nameTB.TabIndex = 1;
-            this.nameTB.TextChanged += new System.EventHandler(this.nameTB_TextChanged);
             // 
             // greetingsText
             // 

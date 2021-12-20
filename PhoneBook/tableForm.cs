@@ -31,15 +31,38 @@ namespace PhoneBook
             string fathername = get.Fathername;
             DB dB = new DB();
             DataTable dataTable = new DataTable();
+            DataTable dataTable2 = new DataTable();
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
-            MySqlCommand command = new MySqlCommand($"SELECT * FROM 'user'");
+            MySqlCommand command = new MySqlCommand($"SELECT * FROM `address`", dB.getConnection());
+            MySqlDataAdapter dataAdapter2 = new MySqlDataAdapter();
+            MySqlCommand command2 = new MySqlCommand();
             dataAdapter.SelectCommand = command;
             int role = get.Role;
+            dB.connectionOpen();
             dataAdapter.Fill(dataTable);
-            List<string> names = new List<string>();
-            for(int k; k = 2;k++)
+            dB.connectionClose();
+            int i = 0;
+            while (i <= dataTable.Rows.Count)
             {
-                names.Add($"{}")
+                command2.CommandText = $"SELECT * FROM `department` WHERE id = {dataTable.Rows[i][7]}";
+                command2.Connection = dB.getConnection();
+                dB.connectionOpen();
+                dataAdapter2.Fill(dataTable2);
+                dB.connectionClose();
+                listBox1.Items.Add($"{dataTable2.Rows[0][1]}");
+                dataTable2.Clear();
+                if (i != 0 && Convert.ToString(dataTable.Rows[i][7]) != Convert.ToString(dataTable.Rows[i-1][7])) 
+                {
+                    command2.CommandText = $"SELECT * FROM `department` WHERE id = {dataTable.Rows[i][7]}";
+                    command2.Connection = dB.getConnection();
+                    dB.connectionOpen();
+                    dataAdapter2.Fill(dataTable2);
+                    dB.connectionClose();
+                    listBox1.Items.Add($"{dataTable2.Rows[0][1]}");
+                    dataTable2.Clear();
+                }
+                listBox1.Items.Add($"{Convert.ToString(dataTable.Rows[i][1])} {Convert.ToString(dataTable.Rows[i][2])} {Convert.ToString(dataTable.Rows[i][3])}");
+                i++;
             }
             if (role == 1)
             {
@@ -52,43 +75,8 @@ namespace PhoneBook
                 postTB.ReadOnly = false;
                 surnameTB.ReadOnly = false;
             }
-            
 
-            
-        }
 
-        private void nameTB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void surnameTB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fathernameTB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void adressTB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cabTB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void citynumberTB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void postTB_TextChanged(object sender, EventArgs e)
-        {
 
         }
     }
